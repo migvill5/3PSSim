@@ -7,15 +7,12 @@ addpath('ui');
 const = [1.83,...      % Separator's diameter      [m]
          6.10,...      % Length A section          [m]
          1.22,...      % Length B section          [m]
-         1.00,...      % Weir height               [m]
-         2.4028e-4,... % Water valve const.        [adm]
-         212,...       % Water valve coef.         [m3/Pa^0.5]
+         0.80,...      % Weir height               [m]
+         3.30e-3,...   % Water valve coef.         [m3/s Pa^0.5]
          101325,...    % Outside pressure valve A  [Pa]
-         2.4028E-4,... % Oil valve const.          [adm]
-         212,...       % Oil valve coef.           [m3/Pa^0.5]
+         9.64e-4,...   % Oil valve coef.           [m3/Pa^0.5]
          101325,...    % Outside pressure valve B  [Pa]
-         2.881E-4,...  % Gas valve const.          [adm]
-         417,...       % Gas valve coef.           [m3/Pa^0.5]         
+         9.83e-4,...   % Gas valve coef.           [m3/Pa^0.5]         
          101325,...    % Outside pressure valve C  [Pa]
          920,...       % Oil density               [kg/m3]
          0.9218,...    % Oil Specific gravity      [adm]
@@ -27,8 +24,8 @@ const = [1.83,...      % Separator's diameter      [m]
          355.37,...    % Temperature               [K]  (180°F)
          ];
 
-ini = [0.01;...      % ha0
-       0.01;...      % hw0
+ini = [0.05;...      % hc0
+       0.05;...      % hw0
        0.01;...      % hb0
        101325];      % Pg0
    
@@ -38,3 +35,4 @@ qgi = 0.4905;        % Gas inflow [m3/s] -> 1.5 MMSCFD
 vpw = 1.0;
 vpc = 1.0;
 vpg = 1.0;
+
